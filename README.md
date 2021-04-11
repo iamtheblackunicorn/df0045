@@ -9,8 +9,8 @@ This app is a graphic tool to convert binary and hexadecimal numbers into decima
 ## Download :inbox_tray:
 
 - *Dark Red* (v.1.0.0):
-  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk)
-  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip)
+  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk) (17.7 MB)
+  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip) (13.5 MB)
 
 ## Building :hammer:
 
