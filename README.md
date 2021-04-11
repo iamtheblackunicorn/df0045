@@ -8,7 +8,7 @@
 
 ## About :books:
 
-This app is a graphic tool to convert binary and hexadecimal numbers into decimal numbers. By binary numbers I mean of Base 2. By hexadecimal numbers I mean numbers of Base 16. Decimal numbers are numbers of base 10 and ***NOT*** `double`s.
+This app is a graphic tool to convert binary and hexadecimal numbers into decimal numbers. By binary numbers I mean numbers of base 2. By hexadecimal numbers I mean numbers of base 16. Decimal numbers are numbers of base 10 and ***NOT*** doubles.
 
 ## Download :inbox_tray:
 
