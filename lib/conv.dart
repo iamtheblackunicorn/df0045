@@ -9,7 +9,28 @@ class ConverterState extends State<Converter>{
   @override
   Widget build(BuildContext context){
     TextEditingController textController = new TextEditingController();
+
     return Scaffold(
+      appBar: new AppBar(
+        iconTheme: IconThemeData(
+          color: Color(0xFF000000),
+        ),
+        centerTitle: true,
+        backgroundColor: Color(0xFFFFFFFF),
+        title: new Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              new Text(
+                'Converter',
+                style: new TextStyle(
+                  color: Color(0xFF000000),
+                  fontSize: 30
+                ),
+              ),
+            ]
+          ),
+        ),
+      backgroundColor: Color(0xFFFFFFFF),
       body: new Center(
         child: new Column(
           children: <Widget> [
@@ -100,7 +121,10 @@ class ConverterState extends State<Converter>{
                         color: Color(0xFFFFFFFF),
                         fontSize: 30
                       )
-                    )
+                    ),
+                    onPressed: () {
+
+                    }
                   ),
 
                   new RaisedButton(
@@ -115,7 +139,10 @@ class ConverterState extends State<Converter>{
                         color: Color(0xFFFFFFFF),
                         fontSize: 30
                       )
-                    )
+                    ),
+                    onPressed: () {
+
+                    }
                   ),
 
                 ]
@@ -125,43 +152,57 @@ class ConverterState extends State<Converter>{
             new Padding(
               padding: EdgeInsets.all(20),
               child: new SizedBox(
-                width: 250,
-                child: new TextField(
-                controller: textController,
-                maxLength: 30,
-                maxLines: 1,
-                maxLengthEnforced: true,
-                autofocus: false,
-                decoration: new InputDecoration(
-                  counterText: '',
-                  hintText: 'YOUR GUESS?',
-                  hintStyle: TextStyle(
-                  fontSize: 20,
+                width: 500,
+                height: 100,
+                child: new Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25)
+                  ),
                   color: Color(0xFF000000),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                  color: Color(0xFF000000), width: 3.0),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                  color: Color(0xFF000000), width: 2.5),
-                  ),
-                  border: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                  color: Color(0xFF000000), width: 1.0),
-                  ),
-                ),
-                style: TextStyle(
-                  height: 2.0,
-                  color: Color(0xFF000000),
-                  fontSize: 20,
+                  child: new Padding(
+                    padding: EdgeInsets.all(30),
+                    child: new TextField(
+                      controller: textController,
+                      maxLength: 30,
+                      maxLines: 1,
+                      maxLengthEnforced: true,
+                      autofocus: false,
+                      decoration: new InputDecoration(
+                        counterText: '',
+                        hintText: 'NUMBER',
+                        hintStyle: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xFFFFFFFF),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFFFFFFF),
+                            width: 3.0
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFFFFFFF),
+                            width: 2.5
+                          ),
+                        ),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFFFFFFF),
+                            width: 1.0
+                          ),
+                        ),
+                      ),
+                      style: TextStyle(
+                        height: 2.0,
+                        color: Color(0xFFFFFFFF),
+                        fontSize: 20,
+                      )
+                    )
                   )
                 )
-              ),
-
               )
-
+            )
           ]
         )
       )
