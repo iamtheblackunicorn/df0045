@@ -17,10 +17,10 @@ class Converter extends StatefulWidget{
 }
 
 class ConverterState extends State<Converter>{
-  late final String inputType;
-  late final String outputType;
-  late final String inputLabelText;
-  late final String outputLabelText;
+  String inputType;
+  String outputType;
+  String inputLabelText;
+  String outputLabelText;
   @override
   void initState(){
     super.initState();
@@ -231,7 +231,7 @@ class ConverterState extends State<Converter>{
               padding: EdgeInsets.all(stdPadding),
               child: new SizedBox(
                 width: textBoxWidth,
-                height: textBoxheight/2,
+                height: textBoxHeight/2,
                 child: new Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(stdRounding)
@@ -241,7 +241,7 @@ class ConverterState extends State<Converter>{
                     padding: EdgeInsets.all(buttonFontSize),
                     child: new TextField(
                       controller: textController,
-                      maxLength: buttonFontSize,
+                      maxLength: (buttonFontSize).toInt(),
                       maxLines: (lineThickness-2).toInt(),
                       maxLengthEnforced: titleCenter,
                       autofocus: false,

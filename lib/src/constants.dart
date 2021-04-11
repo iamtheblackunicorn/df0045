@@ -16,7 +16,7 @@ String headingFont = 'Ostrich';
 String defaultFont = 'Lobster';
 String appVersion = '1.0.0';
 String appAuthor = 'Alexander Abraham';
-String appLicense = 'MIT'
+String appLicense = 'MIT';
 String unicornHead = getEmoji('unicornHead');
 String blackHeart = getEmoji('blackHeart');
 
@@ -31,7 +31,7 @@ double stdRounding = 25;
 double stdPadding = 20;
 double cardPushDown = 150;
 double boxWidth = 400;
-double boxHeight: 300;
+double boxHeight = 300;
 bool titleCenter = true;
 
 /// Converter screen variables.

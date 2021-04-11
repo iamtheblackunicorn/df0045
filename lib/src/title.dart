@@ -29,7 +29,7 @@ class Home extends StatelessWidget{
             new Text(
               appTitle,
               style: new TextStyle(
-                color: Color(accentColor),
+                color: accentColor,
                 fontSize: headingSize,
                 fontFamily: headingFont
               )
@@ -39,12 +39,12 @@ class Home extends StatelessWidget{
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(accentColor),
+              color: accentColor,
               child: new Text(
                 '$converterMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(mainColor),
+                  color: mainColor,
                   fontSize: buttonFontSize,
                   fontFamily: defaultFont
                 )
@@ -63,12 +63,12 @@ class Home extends StatelessWidget{
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(accentColor),
+              color: accentColor,
               child: new Text(
                 '$infoMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(mainColor),
+                  color: mainColor,
                   fontSize: buttonFontSize,
                   fontFamily: defaultFont
                 )
@@ -87,12 +87,12 @@ class Home extends StatelessWidget{
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(accentColor),
+              color: accentColor,
               child: new Text(
                 '$quitMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(mainColor),
+                  color: mainColor,
                   fontSize: buttonFontSize,
                   fontFamily: defaultFont
                 )

@@ -49,6 +49,9 @@ class Info extends StatelessWidget{
                 width: boxWidth,
                 height: boxHeight,
                 child: new Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(stdRounding)
+                  ),
                   color: accentColor,
                   child: new Column(
                     children: <Widget> [
