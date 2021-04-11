@@ -4,11 +4,13 @@
 
 ## About :books:
 
-
+This app is a graphic tool to convert binary and hexadecimal numbers into decimal numbers. By binary numbers I mean of Base 2. By hexadecimal numbers I mean numbers of Base 16. Decimal numbers are numbers of base 10 and ***NOT*** `double`s.
 
 ## Download :inbox_tray:
 
-- *Dark Red* (v.1.0.0): [Download](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk) (18.2 MB)
+- *Dark Red* (v.1.0.0):
+  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk)
+  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip)
 
 ## Building :hammer:
 
