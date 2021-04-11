@@ -32,7 +32,6 @@ class ConverterState extends State<Converter>{
   @override
   Widget build(BuildContext context){
     TextEditingController textController = new TextEditingController();
-    String numberMessage = AppLocalizations.of(context).numberLabel;
     String decimalMessage = AppLocalizations.of(context).decimalLabel;
     String hexMessage = AppLocalizations.of(context).hexLabel;
     String binaryMessage = AppLocalizations.of(context).binaryLabel;
@@ -247,7 +246,7 @@ class ConverterState extends State<Converter>{
                       autofocus: false,
                       decoration: new InputDecoration(
                         counterText: '',
-                        hintText: '$numberMessage',
+                        hintText: '',
                         hintStyle: TextStyle(
                           fontSize: stdPadding,
                           color: mainColor,

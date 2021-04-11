@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:termstyle/termstyle.dart';
 
 /// General variables.
-String appTitle = 'DF0045';
+String appTitle = '#DF0045';
 Color mainColor = Color(0xFFFFFFFF);
 Color accentColor = Color(0xFF000000);
 String headingFont = 'Ostrich';
@@ -21,7 +21,7 @@ String unicornHead = getEmoji('unicornHead');
 String blackHeart = getEmoji('blackHeart');
 
 /// Title screen variables.
-double aboveHeadingSpace = 100;
+double aboveHeadingSpace = 300;
 double belowHeadingSpace = 50;
 double headingSize = 40;
 double buttonFontSize = 30;
@@ -31,7 +31,7 @@ double stdRounding = 25;
 double stdPadding = 20;
 double cardPushDown = 150;
 double boxWidth = 400;
-double boxHeight = 300;
+double boxHeight = 500;
 bool titleCenter = true;
 
 /// Converter screen variables.

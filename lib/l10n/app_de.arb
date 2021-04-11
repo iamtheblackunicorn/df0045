@@ -1,0 +1,12 @@
+{
+  "converterLabel": "Konvertieren",
+  "infoLabel": "Info",
+  "quitLabel": "Ende",
+  "byLabel": "von",
+  "licensePhraseLabel": "Lizensiert unter der",
+  "licenseLabel": "Lizenz",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binaer",
+  "hexLabel": "Hex",
+  "resetLabel": "Neu"
+}
