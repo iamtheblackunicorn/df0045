@@ -1,9 +1,15 @@
 import 'constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    String licensePhraseMessage = AppLocalizations.of(context).licensePhraseLabel;
+    String licenseMessage = AppLocalizations.of(context).licenseLabel;
+    String infoMessage = AppLocalizations.of(context).infoLabel;
+    String byMessage = AppLocalizations.of(context).byLabel;
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
@@ -15,7 +21,7 @@ class Info extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               new Text(
-                'Info',
+                '$infoMessage',
                 style: new TextStyle(
                   color: accentColor,
                   fontSize: buttonFontSize,
@@ -42,7 +48,7 @@ class Info extends StatelessWidget{
                       new Padding(
                         padding: EdgeInsets.all(stdPadding),
                         child: new Text(
-                          'INFO',
+                          '$infoMessage',
                           style: new TextStyle(
                             color:mainColor,
                             fontSize: buttonFontSize,
@@ -53,7 +59,7 @@ class Info extends StatelessWidget{
                       new Padding(
                         padding: EdgeInsets.all(stdPadding),
                         child: new Text(
-                          'DF0045 v.1.0.0 by Alexander Abraham\nlicensed under the MIT license',
+                          '$appTitle v.$appVersion by $appAuthor\n$licensePhraseMessage $appLicense $licenseMessage',
                           style: new TextStyle(
                             color:mainColor,
                             fontSize: buttonFontSize,

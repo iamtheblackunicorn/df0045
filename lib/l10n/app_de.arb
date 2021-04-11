@@ -1,5 +1,8 @@
 {
   "converterLabel": "Convert",
   "infoLabel": "Info",
-  "quitLabel": "Quit"
+  "quitLabel": "Quit",
+  "byLabel": "by",
+  "licensePhraseLabel": "licensed unde the",
+  "licenseLabel": "license"
 }

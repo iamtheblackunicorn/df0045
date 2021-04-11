@@ -6,6 +6,9 @@ Color mainColor = Color(0xFFFFFFFF);
 Color accentColor = Color(0xFF000000);
 String headingFont = 'Ostrich';
 String defaultFont = 'Lobster';
+String appVersion = '1.0.0';
+String appAuthor = 'Alexander Abraham';
+String appLicense = 'MIT'
 
 /// Title screen variables.
 double aboveHeadingSpace = 100;
