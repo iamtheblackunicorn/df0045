@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'conv.dart';
+import 'src/conv.dart';
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'DF',
+      title: 'DF0045',
       home: Converter(),
     )
   );

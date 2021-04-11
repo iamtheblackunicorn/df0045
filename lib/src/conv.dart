@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'numbers.dart';
 
 class Converter extends StatefulWidget{
   @override
@@ -6,10 +7,21 @@ class Converter extends StatefulWidget{
 }
 
 class ConverterState extends State<Converter>{
+  String inputType;
+  String outputType;
+  String inputLabelText;
+  String outputLabelText;
+  @override
+  void initState(){
+    super.initState();
+    String inputType = 'Input';
+    String outputType = 'Output';
+    String inputLabelText = '01 OR OXFF';
+    String outputLabelText = '45?';
+  }
   @override
   Widget build(BuildContext context){
     TextEditingController textController = new TextEditingController();
-
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
@@ -31,7 +43,7 @@ class ConverterState extends State<Converter>{
           ),
         ),
       backgroundColor: Color(0xFFFFFFFF),
-      body: new Center(
+      body: new SingleChildScrollView(child: new Center(
         child: new Column(
           children: <Widget> [
 
@@ -55,7 +67,7 @@ class ConverterState extends State<Converter>{
                           children: <Widget> [
                             new SizedBox(height: 40),
                             new Text(
-                              'HELLO!',
+                              '$inputType',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Color(0xFFFFFFFF),
@@ -63,7 +75,7 @@ class ConverterState extends State<Converter>{
                               )
                             ),
                             new Text(
-                              'HELLO!',
+                              '$inputLabelText',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Color(0xFFFFFFFF),
@@ -79,7 +91,7 @@ class ConverterState extends State<Converter>{
                           children: <Widget> [
                             new SizedBox(height: 40),
                             new Text(
-                              'HELLO!',
+                              '$outputType',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Color(0xFFFFFFFF),
@@ -87,7 +99,7 @@ class ConverterState extends State<Converter>{
                               )
                             ),
                             new Text(
-                              'HELLO!',
+                              '$outputLabelText',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Color(0xFFFFFFFF),
@@ -115,7 +127,7 @@ class ConverterState extends State<Converter>{
                     ),
                     color: Color(0xFF000000),
                     child: new Text(
-                      'HELLO!',
+                      'BINARY',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: Color(0xFFFFFFFF),
@@ -123,7 +135,17 @@ class ConverterState extends State<Converter>{
                       )
                     ),
                     onPressed: () {
-
+                      String userInput = textController.text;
+                      print(userInput);
+                      if (isBinary(userInput) == true){
+                        String result = convertBinaryToDecimal(userInput);
+                        setState((){
+                          inputType = 'Binary';
+                          outputType = 'Deicmal';
+                          inputLabelText = '$userInput';
+                          outputLabelText = '$result';
+                        });
+                      } else {}
                     }
                   ),
 
@@ -133,7 +155,7 @@ class ConverterState extends State<Converter>{
                     ),
                     color: Color(0xFF000000),
                     child: new Text(
-                      'HELLO!',
+                      'HEX',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: Color(0xFFFFFFFF),
@@ -141,7 +163,17 @@ class ConverterState extends State<Converter>{
                       )
                     ),
                     onPressed: () {
-
+                      String userInput = textController.text;
+                      if (isHex(userInput) == true){
+                        print('HELLO!');
+                        String result = convertHexadecimalToDecimal(userInput);
+                        setState((){
+                          inputType = 'Hex';
+                          outputType = 'Deicmal';
+                          inputLabelText = '$userInput';
+                          outputLabelText = '$result';
+                        });
+                      } else {}
                     }
                   ),
 
@@ -205,7 +237,7 @@ class ConverterState extends State<Converter>{
             )
           ]
         )
-      )
+      ))
     );
   }
 }

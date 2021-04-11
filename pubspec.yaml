@@ -1,4 +1,4 @@
-name: df0045
+name: df
 description: Convert numbers!
 publish_to: 'none'
 version: 1.0.0+1
@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   intl: any
+  harpo:
+    git: https://github.com/iamtheblackunicorn/Harpo.git
 dev_dependencies:
   flutter_test:
     sdk: flutter
