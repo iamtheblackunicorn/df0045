@@ -1,5 +1,15 @@
-import 'package:flutter/material.dart';
+/*
+DF0045 Number Conversion app
+by Alexander Abraham a.k.a.
+"The Black Unicorn".
+Licensed under the MIT license.
+*/
+
 import 'numbers.dart';
+import 'constants.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Converter extends StatefulWidget{
   @override
@@ -14,14 +24,20 @@ class ConverterState extends State<Converter>{
   @override
   void initState(){
     super.initState();
-    inputType = 'Input';
-    outputType = 'Output';
-    inputLabelText = '01 OR OXFF';
+    inputType = 'I';
+    outputType = 'O';
+    inputLabelText = '01 || OXFF';
     outputLabelText = '45?';
   }
   @override
   Widget build(BuildContext context){
     TextEditingController textController = new TextEditingController();
+    String numberMessage = AppLocalizations.of(context).numberLabel;
+    String decimalMessage = AppLocalizations.of(context).decimalLabel;
+    String hexMessage = AppLocalizations.of(context).hexLabel;
+    String binaryMessage = AppLocalizations.of(context).binaryLabel;
+    String resetMessage = AppLocalizations.of(context).resetLabel;
+    String converterMessage = AppLocalizations.of(context).converterLabel;
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
@@ -33,7 +49,7 @@ class ConverterState extends State<Converter>{
           mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               new Text(
-                'Converter',
+                '$converterMessage',
                 style: new TextStyle(
                   color: accentColor,
                   fontSize: buttonFontSize,
@@ -132,7 +148,7 @@ class ConverterState extends State<Converter>{
                     ),
                     color: accentColor,
                     child: new Text(
-                      'BINARY',
+                      '$binaryMessage',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: mainColor,
@@ -146,8 +162,8 @@ class ConverterState extends State<Converter>{
                       if (isBinary(userInput) == titleCenter){
                         String result = convertBinaryToDecimal(userInput);
                         setState((){
-                          inputType = 'Binary';
-                          outputType = 'Decimal';
+                          inputType = '$binaryMessage';
+                          outputType = '$decimalMessage';
                           inputLabelText = '$userInput';
                           outputLabelText = '$result';
                         });
@@ -161,7 +177,7 @@ class ConverterState extends State<Converter>{
                     ),
                     color: accentColor,
                     child: new Text(
-                      'HEX',
+                      '$hexMessage',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: mainColor,
@@ -172,11 +188,10 @@ class ConverterState extends State<Converter>{
                     onPressed: () {
                       String userInput = textController.text;
                       if (isHex(userInput) == titleCenter){
-                        print('HELLO!');
                         String result = convertHexadecimalToDecimal(userInput);
                         setState((){
-                          inputType = 'Hex';
-                          outputType = 'Decimal';
+                          inputType = '$binaryMessage';
+                          outputType = '$decimalMessage';
                           inputLabelText = '$userInput';
                           outputLabelText = '$result';
                         });
@@ -190,7 +205,7 @@ class ConverterState extends State<Converter>{
                     ),
                     color: accentColor,
                     child: new Text(
-                      'RESET',
+                      '$resetMessage',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: mainColor,
@@ -200,9 +215,9 @@ class ConverterState extends State<Converter>{
                     ),
                     onPressed: () {
                       setState((){
-                        inputType = 'Input';
-                        outputType = 'Output';
-                        inputLabelText = '01 OR OXFF';
+                        inputType = 'I';
+                        outputType = 'O';
+                        inputLabelText = '01 || OXFF';
                         outputLabelText = '45?';
                       });
                     }
@@ -232,7 +247,7 @@ class ConverterState extends State<Converter>{
                       autofocus: false,
                       decoration: new InputDecoration(
                         counterText: '',
-                        hintText: 'NUMBER',
+                        hintText: '$numberMessage',
                         hintStyle: TextStyle(
                           fontSize: stdPadding,
                           color: mainColor,

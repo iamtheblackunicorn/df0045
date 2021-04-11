@@ -1,3 +1,10 @@
+/*
+DF0045 Number Conversion app
+by Alexander Abraham a.k.a.
+"The Black Unicorn".
+Licensed under the MIT license.
+*/
+
 import 'dart:io';
 import 'conv.dart';
 import 'info.dart';

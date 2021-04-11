@@ -13,6 +13,8 @@ dependencies:
   intl: any
   harpo:
     git: https://github.com/iamtheblackunicorn/Harpo.git
+  termstyle:
+    git: https://github.com/iamtheblackunicorn/TermStyle.git
 dev_dependencies:
   flutter_test:
     sdk: flutter

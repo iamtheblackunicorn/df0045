@@ -1,3 +1,10 @@
+/*
+DF0045 Number Conversion app
+by Alexander Abraham a.k.a.
+"The Black Unicorn".
+Licensed under the MIT license.
+*/
+
 import 'constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -59,7 +66,7 @@ class Info extends StatelessWidget{
                       new Padding(
                         padding: EdgeInsets.all(stdPadding),
                         child: new Text(
-                          '$appTitle v.$appVersion by $appAuthor\n$licensePhraseMessage $appLicense $licenseMessage',
+                          '$appTitle v.$appVersion by $appAuthor $blackHeart $unicornHead.\n$licensePhraseMessage $appLicense $licenseMessage.',
                           style: new TextStyle(
                             color:mainColor,
                             fontSize: buttonFontSize,

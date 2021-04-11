@@ -1,3 +1,10 @@
+/*
+DF0045 Number Conversion app
+by Alexander Abraham a.k.a.
+"The Black Unicorn".
+Licensed under the MIT license.
+*/
+
 import 'package:harpo/harpo.dart';
 
 bool isBinary(String binaryNumber){

@@ -3,6 +3,11 @@
   "infoLabel": "Info",
   "quitLabel": "Quit",
   "byLabel": "by",
-  "licensePhraseLabel": "licensed unde the",
-  "licenseLabel": "license"
+  "licensePhraseLabel": "Licensed unde the",
+  "licenseLabel": "license",
+  "numberLabel": "Your number",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binary",
+  "hexLabel": "Hex",
+  "resetLabel": "Reset"
 }

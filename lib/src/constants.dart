@@ -1,4 +1,12 @@
+/*
+DF0045 Number Conversion app
+by Alexander Abraham a.k.a.
+"The Black Unicorn".
+Licensed under the MIT license.
+*/
+
 import 'package:flutter/material.dart';
+import 'package:termstyle/termstyle.dart';
 
 /// General variables.
 String appTitle = 'DF0045';
@@ -9,6 +17,8 @@ String defaultFont = 'Lobster';
 String appVersion = '1.0.0';
 String appAuthor = 'Alexander Abraham';
 String appLicense = 'MIT'
+String unicornHead = getEmoji('unicornHead');
+String blackHeart = getEmoji('blackHeart');
 
 /// Title screen variables.
 double aboveHeadingSpace = 100;
