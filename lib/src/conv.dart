@@ -14,10 +14,10 @@ class ConverterState extends State<Converter>{
   @override
   void initState(){
     super.initState();
-    String inputType = 'Input';
-    String outputType = 'Output';
-    String inputLabelText = '01 OR OXFF';
-    String outputLabelText = '45?';
+    inputType = 'Input';
+    outputType = 'Output';
+    inputLabelText = '01 OR OXFF';
+    outputLabelText = '45?';
   }
   @override
   Widget build(BuildContext context){
@@ -141,7 +141,7 @@ class ConverterState extends State<Converter>{
                         String result = convertBinaryToDecimal(userInput);
                         setState((){
                           inputType = 'Binary';
-                          outputType = 'Deicmal';
+                          outputType = 'Decimal';
                           inputLabelText = '$userInput';
                           outputLabelText = '$result';
                         });
@@ -169,11 +169,34 @@ class ConverterState extends State<Converter>{
                         String result = convertHexadecimalToDecimal(userInput);
                         setState((){
                           inputType = 'Hex';
-                          outputType = 'Deicmal';
+                          outputType = 'Decimal';
                           inputLabelText = '$userInput';
                           outputLabelText = '$result';
                         });
                       } else {}
+                    }
+                  ),
+
+                  new RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)
+                    ),
+                    color: Color(0xFF000000),
+                    child: new Text(
+                      'RESET',
+                      textAlign: TextAlign.left,
+                      style: new TextStyle(
+                        color: Color(0xFFFFFFFF),
+                        fontSize: 30
+                      )
+                    ),
+                    onPressed: () {
+                      setState((){
+                        inputType = 'Input';
+                        outputType = 'Output';
+                        inputLabelText = '01 OR OXFF';
+                        outputLabelText = '45?';
+                      });
                     }
                   ),
 
