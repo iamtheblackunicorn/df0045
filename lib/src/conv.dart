@@ -7,10 +7,10 @@ class Converter extends StatefulWidget{
 }
 
 class ConverterState extends State<Converter>{
-  String inputType;
-  String outputType;
-  String inputLabelText;
-  String outputLabelText;
+  late final String inputType;
+  late final String outputType;
+  late final String inputLabelText;
+  late final String outputLabelText;
   @override
   void initState(){
     super.initState();
@@ -25,85 +25,90 @@ class ConverterState extends State<Converter>{
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
-          color: Color(0xFF000000),
+          color: accentColor,
         ),
-        centerTitle: true,
-        backgroundColor: Color(0xFFFFFFFF),
+        centerTitle: titleCenter,
+        backgroundColor: mainColor,
         title: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               new Text(
                 'Converter',
                 style: new TextStyle(
-                  color: Color(0xFF000000),
-                  fontSize: 30
+                  color: accentColor,
+                  fontSize: buttonFontSize,
+                  fontFamily: defaultFont
                 ),
               ),
             ]
           ),
         ),
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: mainColor,
       body: new SingleChildScrollView(child: new Center(
         child: new Column(
           children: <Widget> [
 
             new Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(stdPadding),
               child: new SizedBox(
-                width: 500,
-                height: 200,
+                width: textBoxWidth,
+                height: textBoxHeight,
                 child: new Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25)
+                    borderRadius: BorderRadius.circular(stdRounding)
                   ),
-                  color: Color(0xFF000000),
+                  color: accentColor,
                   child: new Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(stdPadding),
                     child: new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget> [
 
                         new Column(
                           children: <Widget> [
-                            new SizedBox(height: 40),
+                            new SizedBox(height: boxSizingDif),
                             new Text(
                               '$inputType',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 20
+                                color: mainColor,
+                                fontSize: stdPadding,
+                                fontFamily: defaultFont
                               )
                             ),
                             new Text(
                               '$inputLabelText',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 30
+                                color: mainColor,
+                                fontSize: buttonFontSize,
+                                fontFamily: defaultFont
                               )
                             )
                           ]
                         ),
 
-                        new SizedBox(width: 70),
+                        new SizedBox(width: boxPushBetween),
 
                         new Column(
                           children: <Widget> [
-                            new SizedBox(height: 40),
+                            new SizedBox(height: boxSizingDif),
                             new Text(
                               '$outputType',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 20
+                                color: mainColor,
+                                fontSize: stdPadding,
+                                fontFamily: defaultFont
                               )
                             ),
                             new Text(
                               '$outputLabelText',
                               textAlign: TextAlign.left,
                               style: new TextStyle(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 30
+                                color: mainColor,
+                                fontSize: buttonFontSize,
+                                fontFamily: defaultFont
                               )
                             )
                           ]
@@ -117,27 +122,28 @@ class ConverterState extends State<Converter>{
             ),
 
             new Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(stdPadding),
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget> [
                   new RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25)
+                      borderRadius: BorderRadius.circular(stdRounding)
                     ),
-                    color: Color(0xFF000000),
+                    color: accentColor,
                     child: new Text(
                       'BINARY',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 30
+                        color: mainColor,
+                        fontSize: buttonFontSize,
+                        fontFamily: defaultFont
                       )
                     ),
                     onPressed: () {
                       String userInput = textController.text;
                       print(userInput);
-                      if (isBinary(userInput) == true){
+                      if (isBinary(userInput) == titleCenter){
                         String result = convertBinaryToDecimal(userInput);
                         setState((){
                           inputType = 'Binary';
@@ -151,20 +157,21 @@ class ConverterState extends State<Converter>{
 
                   new RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25)
+                      borderRadius: BorderRadius.circular(stdRounding)
                     ),
-                    color: Color(0xFF000000),
+                    color: accentColor,
                     child: new Text(
                       'HEX',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 30
+                        color: mainColor,
+                        fontSize: buttonFontSize,
+                        fontFamily: defaultFont
                       )
                     ),
                     onPressed: () {
                       String userInput = textController.text;
-                      if (isHex(userInput) == true){
+                      if (isHex(userInput) == titleCenter){
                         print('HELLO!');
                         String result = convertHexadecimalToDecimal(userInput);
                         setState((){
@@ -179,15 +186,16 @@ class ConverterState extends State<Converter>{
 
                   new RaisedButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25)
+                      borderRadius: BorderRadius.circular(stdRounding)
                     ),
-                    color: Color(0xFF000000),
+                    color: accentColor,
                     child: new Text(
                       'RESET',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 30
+                        color: mainColor,
+                        fontSize: buttonFontSize,
+                        fontFamily: defaultFont
                       )
                     ),
                     onPressed: () {
@@ -205,53 +213,55 @@ class ConverterState extends State<Converter>{
             ),
 
             new Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(stdPadding),
               child: new SizedBox(
-                width: 500,
-                height: 100,
+                width: textBoxWidth,
+                height: textBoxheight/2,
                 child: new Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25)
+                    borderRadius: BorderRadius.circular(stdRounding)
                   ),
-                  color: Color(0xFF000000),
+                  color: accentColor,
                   child: new Padding(
-                    padding: EdgeInsets.all(30),
+                    padding: EdgeInsets.all(buttonFontSize),
                     child: new TextField(
                       controller: textController,
-                      maxLength: 30,
-                      maxLines: 1,
-                      maxLengthEnforced: true,
+                      maxLength: buttonFontSize,
+                      maxLines: (lineThickness-2).toInt(),
+                      maxLengthEnforced: titleCenter,
                       autofocus: false,
                       decoration: new InputDecoration(
                         counterText: '',
                         hintText: 'NUMBER',
                         hintStyle: TextStyle(
-                          fontSize: 20,
-                          color: Color(0xFFFFFFFF),
+                          fontSize: stdPadding,
+                          color: mainColor,
+                          fontFamily: defaultFont
                         ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFFFFFFFF),
-                            width: 3.0
+                            color: mainColor,
+                            width: lineThickness
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFFFFFFFF),
-                            width: 2.5
+                            color: mainColor,
+                            width: (lineThickness-0.5)
                           ),
                         ),
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFFFFFFFF),
-                            width: 1.0
+                            color: mainColor,
+                            width: (lineThickness-1.5)
                           ),
                         ),
                       ),
                       style: TextStyle(
-                        height: 2.0,
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 20,
+                        height: (lineThickness-1.0),
+                        color: mainColor,
+                        fontSize: stdPadding,
+                        fontFamily: defaultFont
                       )
                     )
                   )

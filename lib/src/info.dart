@@ -1,3 +1,4 @@
+import 'constants.dart';
 import 'package:flutter/material.dart';
 
 class Info extends StatelessWidget{
@@ -6,54 +7,57 @@ class Info extends StatelessWidget{
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
-          color: Color(0xFF000000),
+          color: accentColor,
         ),
-        centerTitle: true,
-        backgroundColor: Color(0xFFFFFFFF),
+        centerTitle: titleCenter,
+        backgroundColor: mainColor,
         title: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               new Text(
                 'Info',
                 style: new TextStyle(
-                  color: Color(0xFF000000),
-                  fontSize: 30
+                  color: accentColor,
+                  fontSize: buttonFontSize,
+                  fontFamily: defaultFont
                 ),
               ),
             ]
           ),
         ),
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: mainColor,
       body: new Center(
         child: new Column(
           children: <Widget> [
-            new SizedBox(height: 150),
+            new SizedBox(height: cardPushDown),
             new Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(stdPadding),
               child: new SizedBox(
-                width: 400,
-                height: 300,
+                width: boxWidth,
+                height: boxHeight,
                 child: new Card(
-                  color: Color(0xFF000000),
+                  color: accentColor,
                   child: new Column(
                     children: <Widget> [
                       new Padding(
-                        padding: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(stdPadding),
                         child: new Text(
                           'INFO',
                           style: new TextStyle(
-                            color:Color(0xFFFFFFFF),
-                            fontSize: 30,
+                            color:mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
                           )
                         )
                       ),
                       new Padding(
-                        padding: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(stdPadding),
                         child: new Text(
                           'DF0045 v.1.0.0 by Alexander Abraham\nlicensed under the MIT license',
                           style: new TextStyle(
-                            color:Color(0xFFFFFFFF),
-                            fontSize: 30,
+                            color:mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
                           )
                         )
                       )

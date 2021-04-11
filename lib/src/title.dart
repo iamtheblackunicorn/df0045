@@ -1,37 +1,45 @@
-import 'package:flutter/material.dart';
 import 'dart:io';
 import 'conv.dart';
 import 'info.dart';
+import 'constants.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    String converterMessage = AppLocalizations.of(context).converterLabel;
+    String infoMessage = AppLocalizations.of(context).infoLabel;
+    String quitMessage = AppLocalizations.of(context).quitLabel;
     return Scaffold(
       body: new Center(
         child: new Column(
           children: <Widget> [
 
-            new SizedBox(height: 100),
+            new SizedBox(height: aboveHeadingSpace),
 
             new Text(
-              'DF0045',
+              appTitle,
               style: new TextStyle(
-                color: Color(0xFF000000),
-                fontSize: 40
+                color: Color(accentColor),
+                fontSize: headingSize,
+                fontFamily: headingFont
               )
             ),
-            new SizedBox(height: 50),
+            new SizedBox(height: belowHeadingSpace),
             new RaisedButton(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25)
+                borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(0xFF000000),
+              color: Color(accentColor),
               child: new Text(
-                'Convert!',
+                '$converterMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(0xFFFFFFFF),
-                  fontSize: 30
+                  color: Color(mainColor),
+                  fontSize: buttonFontSize,
+                  fontFamily: defaultFont
                 )
               ),
               onPressed: () {
@@ -43,18 +51,19 @@ class Home extends StatelessWidget{
                 );
               }
             ),
-            new SizedBox(height: 30),
+            new SizedBox(height: buttonFontSize),
             new RaisedButton(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25)
+                borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(0xFF000000),
+              color: Color(accentColor),
               child: new Text(
-                'Info',
+                '$infoMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(0xFFFFFFFF),
-                  fontSize: 30
+                  color: Color(mainColor),
+                  fontSize: buttonFontSize,
+                  fontFamily: defaultFont
                 )
               ),
               onPressed: () {
@@ -66,18 +75,19 @@ class Home extends StatelessWidget{
                 );
               }
             ),
-            new SizedBox(height: 30),
+            new SizedBox(height: buttonFontSize),
             new RaisedButton(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25)
+                borderRadius: BorderRadius.circular(stdRounding)
               ),
-              color: Color(0xFF000000),
+              color: Color(accentColor),
               child: new Text(
-                'Quit',
+                '$quitMessage',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
-                  color: Color(0xFFFFFFFF),
-                  fontSize: 30
+                  color: Color(mainColor),
+                  fontSize: buttonFontSize,
+                  fontFamily: defaultFont
                 )
               ),
               onPressed: () {
