@@ -1,3 +1,7 @@
+<p align="center">
+ <img src="https://github.com/iamtheblackunicorn/df0045/raw/main/assets/images/banner.png"/>
+</p>
+
 # DF0045 :eagle:
 
 *A Flutter app to handle conversions between different number systems!* :eagle:
