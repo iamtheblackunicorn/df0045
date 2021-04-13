@@ -21,7 +21,7 @@ String unicornHead = getEmoji('unicornHead');
 String blackHeart = getEmoji('blackHeart');
 
 /// Title screen variables.
-double aboveHeadingSpace = 300;
+double aboveHeadingSpace = 200;
 double belowHeadingSpace = 50;
 double headingSize = 40;
 double buttonFontSize = 30;

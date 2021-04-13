@@ -13,8 +13,8 @@ This app is a graphic tool to convert binary and hexadecimal numbers into decima
 ## Download :inbox_tray:
 
 - *Dark Red* (v.1.0.0):
-  - [Download for Android!](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk) (17.7 MB)
-  - [Download for Mac OSX!](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip) (13.5 MB)
+  - Download for Android: Still work in progress! (17.7 MB)
+  - Download for Mac OSX: Still work in progress! (13.5 MB)
 
 ## Building :hammer:
 
@@ -68,5 +68,6 @@ const Locale('languagecode', ''),
 
 ## Note :scroll:
 
-- *DF0045* :eagle: by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
-- licensed under the MIT license.
+- *DF0045 :eagle:*, a *Black Unicorn Labs :unicorn:* project.
+- *DF0045 :eagle:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
+- Licensed under the MIT license.

@@ -138,94 +138,121 @@ class ConverterState extends State<Converter>{
 
             new Padding(
               padding: EdgeInsets.all(stdPadding),
-              child: new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: new ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
                 children: <Widget> [
-                  new RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(stdRounding)
-                    ),
-                    color: accentColor,
-                    child: new Text(
-                      '$binaryMessage',
-                      textAlign: TextAlign.left,
-                      style: new TextStyle(
-                        color: mainColor,
-                        fontSize: buttonFontSize,
-                        fontFamily: defaultFont
+                  new Row(
+                    children: <Widget> [
+                      new RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(stdRounding)
+                        ),
+                        color: accentColor,
+                        child: new Text(
+                          '$binaryMessage',
+                          textAlign: TextAlign.left,
+                          style: new TextStyle(
+                            color: mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
+                          )
+                        ),
+                        onPressed: () {
+                          String userInput = textController.text;
+                          print(userInput);
+                          if (isBinary(userInput) == titleCenter){
+                            String result = convertBinaryToDecimal(userInput);
+                            setState((){
+                              inputType = '$binaryMessage';
+                              outputType = '$decimalMessage';
+                              inputLabelText = '$userInput';
+                              outputLabelText = '$result';
+                            });
+                          } else {}
+                        }
+                      ),
+                      new RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(stdRounding)
+                        ),
+                        color: accentColor,
+                        child: new Text(
+                          '$hexMessage',
+                          textAlign: TextAlign.left,
+                          style: new TextStyle(
+                            color: mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
+                          )
+                        ),
+                        onPressed: () {
+                          String userInput = textController.text;
+                          if (isHex(userInput) == titleCenter){
+                            String result = convertHexadecimalToDecimal(userInput);
+                            setState((){
+                              inputType = '$hexMessage';
+                              outputType = '$decimalMessage';
+                              inputLabelText = '$userInput';
+                              outputLabelText = '$result';
+                            });
+                          } else {}
+                        }
+                      ),
+                      new RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(stdRounding)
+                        ),
+                        color: accentColor,
+                        child: new Text(
+                          '$resetMessage',
+                          textAlign: TextAlign.left,
+                          style: new TextStyle(
+                            color: mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
+                          )
+                        ),
+                        onPressed: () {
+                          setState((){
+                            inputType = 'I';
+                            outputType = 'O';
+                            inputLabelText = '01 || OXFF';
+                            outputLabelText = '45?';
+                          });
+                        }
+                      ),
+                      new RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(stdRounding)
+                        ),
+                        color: accentColor,
+                        child: new Text(
+                          '$decimalMessage',
+                          textAlign: TextAlign.left,
+                          style: new TextStyle(
+                            color: mainColor,
+                            fontSize: buttonFontSize,
+                            fontFamily: defaultFont
+                          )
+                        ),
+                        onPressed: () {
+                          if (isBinary(userInput) == titleCenter){
+                            String result = convertHexadecimalToDecimal(userInput);
+                            setState((){
+                              inputType = '$hexMessage';
+                              outputType = '$decimalMessage';
+                              inputLabelText = '$userInput';
+                              outputLabelText = '$result';
+                            });
+                          } else {}
+                        }
                       )
-                    ),
-                    onPressed: () {
-                      String userInput = textController.text;
-                      print(userInput);
-                      if (isBinary(userInput) == titleCenter){
-                        String result = convertBinaryToDecimal(userInput);
-                        setState((){
-                          inputType = '$binaryMessage';
-                          outputType = '$decimalMessage';
-                          inputLabelText = '$userInput';
-                          outputLabelText = '$result';
-                        });
-                      } else {}
-                    }
-                  ),
-
-                  new RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(stdRounding)
-                    ),
-                    color: accentColor,
-                    child: new Text(
-                      '$hexMessage',
-                      textAlign: TextAlign.left,
-                      style: new TextStyle(
-                        color: mainColor,
-                        fontSize: buttonFontSize,
-                        fontFamily: defaultFont
-                      )
-                    ),
-                    onPressed: () {
-                      String userInput = textController.text;
-                      if (isHex(userInput) == titleCenter){
-                        String result = convertHexadecimalToDecimal(userInput);
-                        setState((){
-                          inputType = '$binaryMessage';
-                          outputType = '$decimalMessage';
-                          inputLabelText = '$userInput';
-                          outputLabelText = '$result';
-                        });
-                      } else {}
-                    }
-                  ),
-
-                  new RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(stdRounding)
-                    ),
-                    color: accentColor,
-                    child: new Text(
-                      '$resetMessage',
-                      textAlign: TextAlign.left,
-                      style: new TextStyle(
-                        color: mainColor,
-                        fontSize: buttonFontSize,
-                        fontFamily: defaultFont
-                      )
-                    ),
-                    onPressed: () {
-                      setState((){
-                        inputType = 'I';
-                        outputType = 'O';
-                        inputLabelText = '01 || OXFF';
-                        outputLabelText = '45?';
-                      });
-                    }
-                  ),
-
+                    ]
+                  )
                 ]
               )
             ),
-
             new Padding(
               padding: EdgeInsets.all(stdPadding),
               child: new SizedBox(
