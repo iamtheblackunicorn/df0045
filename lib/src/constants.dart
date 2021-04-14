@@ -39,4 +39,4 @@ double textBoxWidth = 500;
 double textBoxHeight = 200;
 double lineThickness = 3.0;
 double boxSizingDif = 40;
-double boxPushBetween = 70;
+double boxPushBetween = 30;
