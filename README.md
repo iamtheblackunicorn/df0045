@@ -18,7 +18,7 @@ This app is a graphic tool to convert binary and hexadecimal numbers into decima
 
 ## Building :hammer:
 
-Make sure that you have the following programs installed:
+Make sure that you have the following programmes installed:
 
 - Flutter SDK
 - Dart SDK
@@ -32,10 +32,10 @@ Make sure that you have the following programs installed:
 After you have installed these, run this command to generate a keystore for the app.
 
 ```bash
-keytool -genkey -v -keystore key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+$ keytool -genkey -v -keystore key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
 ```
 
-After having done that, move the keystore to `android/app` and fill in the fields for the keystore password in the file `android/app/key.properties`.
+After having done that, move the Java keystore to `android/app` and fill in the fields for the keystore password in the file `android/app/key.properties`.
 
 Finally, run these commands:
 
@@ -50,7 +50,7 @@ You have now generated a release build of *DF0045*.
 
 *DF0045* is localized for German and English. To add a language, simply create a filed called `app_languagecode.arb` in `lib/l10n` where `languagecode` represents the languagecode for the language you want to add. If it were Spanish for example, you would create a file called `app_es.arb`.
 Copy and paste the contents from one of the other `*.arb` files and edit the strings accordingly.
-Finally, add this line in the list `supportedLocales` in the file `lib/main.dart`.
+Finally, add this line to the list `supportedLocales` in the file `lib/main.dart`.
 
 ```dart
 const Locale('languagecode', ''),
@@ -68,6 +68,7 @@ const Locale('languagecode', ''),
 
 ## Note :scroll:
 
-- *DF0045 :eagle:*, a *Black Unicorn Labs :unicorn:* project.
+## Note :scroll:
+
 - *DF0045 :eagle:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
 - Licensed under the MIT license.
