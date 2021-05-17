@@ -24,10 +24,10 @@ class ConverterState extends State<Converter>{
   @override
   void initState(){
     super.initState();
-    inputType = 'I';
-    outputType = 'O';
-    inputLabelText = '01 || OXFF';
-    outputLabelText = '45?';
+    inputType = 'Input';
+    outputType = 'Output';
+    inputLabelText = '...';
+    outputLabelText = '...';
   }
   @override
   Widget build(BuildContext context){
@@ -37,6 +37,7 @@ class ConverterState extends State<Converter>{
     String binaryMessage = AppLocalizations.of(context).binaryLabel;
     String resetMessage = AppLocalizations.of(context).resetLabel;
     String converterMessage = AppLocalizations.of(context).converterLabel;
+    String dToBMessage = AppLocalizations.of(context).newLabelOne;
     return Scaffold(
       appBar: new AppBar(
         iconTheme: IconThemeData(
@@ -139,6 +140,7 @@ class ConverterState extends State<Converter>{
             new Padding(
               padding: EdgeInsets.all(stdPadding),
               child: new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget> [
                   new RaisedButton(
                     shape: RoundedRectangleBorder(
@@ -165,6 +167,33 @@ class ConverterState extends State<Converter>{
                           outputLabelText = '$result';
                         });
                       } else {}
+                    }
+                  ),
+                  new SizedBox(
+                    width: boxPushBetween
+                  ),
+                  new RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(stdRounding)
+                    ),
+                    color: accentColor,
+                    child: new Text(
+                      '$dToBMessage',
+                      textAlign: TextAlign.left,
+                      style: new TextStyle(
+                        color: mainColor,
+                        fontSize: buttonFontSize,
+                        fontFamily: defaultFont
+                      )
+                    ),
+                    onPressed: () {
+                      String userInput = textController.text;
+                      setState((){
+                        inputType = '$dToBMessage';
+                        outputType = '$binaryMessage';
+                        inputLabelText = '$userInput';
+                        outputLabelText = convertDecimalToBinary(userInput);
+                      });
                     }
                   ),
                   new SizedBox(
@@ -216,10 +245,10 @@ class ConverterState extends State<Converter>{
                     ),
                     onPressed: () {
                       setState((){
-                        inputType = 'I';
-                        outputType = 'O';
-                        inputLabelText = '01 || OXFF';
-                        outputLabelText = '45?';
+                        inputType = 'Input';
+                        outputType = 'Output';
+                        inputLabelText = '...';
+                        outputLabelText = '...';
                       });
                     }
                   ),

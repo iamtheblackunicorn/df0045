@@ -39,50 +39,52 @@ class Info extends StatelessWidget{
           ),
         ),
       backgroundColor: mainColor,
-      body: new Center(
-        child: new Column(
-          children: <Widget> [
-            new SizedBox(height: cardPushDown),
-            new Padding(
-              padding: EdgeInsets.all(stdPadding),
-              child: new SizedBox(
-                width: boxWidth,
-                height: boxHeight,
-                child: new Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(stdRounding)
-                  ),
-                  color: accentColor,
-                  child: new Column(
-                    children: <Widget> [
-                      new Padding(
-                        padding: EdgeInsets.all(stdPadding),
-                        child: new Text(
-                          '$infoMessage',
-                          style: new TextStyle(
-                            color:mainColor,
-                            fontSize: buttonFontSize,
-                            fontFamily: defaultFont
+      body: new SingleChildScrollView(
+        child: new Center(
+          child: new Column(
+            children: <Widget> [
+              new SizedBox(height: cardPushDown),
+              new Padding(
+                padding: EdgeInsets.all(stdPadding),
+                child: new SizedBox(
+                  width: boxWidth,
+                  height: boxHeight,
+                  child: new Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(stdRounding)
+                    ),
+                    color: accentColor,
+                    child: new Column(
+                      children: <Widget> [
+                        new Padding(
+                          padding: EdgeInsets.all(stdPadding),
+                          child: new Text(
+                            '$infoMessage',
+                            style: new TextStyle(
+                              color:mainColor,
+                              fontSize: buttonFontSize,
+                              fontFamily: defaultFont
+                            )
+                          )
+                        ),
+                        new Padding(
+                          padding: EdgeInsets.all(stdPadding),
+                          child: new Text(
+                            '$appTitle v.$appVersion by $appAuthor $blackHeart $unicornHead.\n$licensePhraseMessage $appLicense $licenseMessage.',
+                            style: new TextStyle(
+                              color:mainColor,
+                              fontSize: buttonFontSize,
+                              fontFamily: defaultFont
+                            )
                           )
                         )
-                      ),
-                      new Padding(
-                        padding: EdgeInsets.all(stdPadding),
-                        child: new Text(
-                          '$appTitle v.$appVersion by $appAuthor $blackHeart $unicornHead.\n$licensePhraseMessage $appLicense $licenseMessage.',
-                          style: new TextStyle(
-                            color:mainColor,
-                            fontSize: buttonFontSize,
-                            fontFamily: defaultFont
-                          )
-                        )
-                      )
-                    ]
+                      ]
+                    )
                   )
                 )
               )
-            )
-          ]
+            ]
+          )
         )
       )
     );

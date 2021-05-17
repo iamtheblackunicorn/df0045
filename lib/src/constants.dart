@@ -14,7 +14,7 @@ Color mainColor = Color(0xFFFFFFFF);
 Color accentColor = Color(0xFF000000);
 String headingFont = 'Ostrich';
 String defaultFont = 'Lobster';
-String appVersion = '1.0.0';
+String appVersion = '1.1.0';
 String appAuthor = 'Alexander Abraham';
 String appLicense = 'MIT';
 String unicornHead = getEmoji('unicornHead');
@@ -24,14 +24,14 @@ String blackHeart = getEmoji('blackHeart');
 double aboveHeadingSpace = 200;
 double belowHeadingSpace = 50;
 double headingSize = 40;
-double buttonFontSize = 30;
+double buttonFontSize = 20;
 double stdRounding = 25;
 
 /// Info screen variables.
 double stdPadding = 20;
 double cardPushDown = 150;
 double boxWidth = 400;
-double boxHeight = 500;
+double boxHeight = 300;
 bool titleCenter = true;
 
 /// Converter screen variables.
@@ -39,4 +39,4 @@ double textBoxWidth = 500;
 double textBoxHeight = 200;
 double lineThickness = 3.0;
 double boxSizingDif = 40;
-double boxPushBetween = 30;
+double boxPushBetween = 0;

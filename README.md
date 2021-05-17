@@ -15,6 +15,9 @@ This app is a graphic tool to convert binary and hexadecimal numbers into decima
 - *Dark Red* (v.1.0.0):
   - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk) (16.9 MB)
   - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip) (12.3 MB)
+- *Dark Green* (v.1.1.0):
+  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.1.0/DF0045-v1.1.0-DarkGreen-Release.apk) (18.03 MB)
+  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.1.0/DF0045-v1.1.0-DarkGreen-Release.app.zip) (13.6 MB)
 
 ## Building :hammer:
 
@@ -60,11 +63,17 @@ const Locale('languagecode', ''),
 
 ## Changelog :black_nib:
 
-### Version 1.0.0: Initial Release:
+### Version 1.0.0: ***Dark Red***
 
 - upload to GitHub
 - polishing of the logic
 - minor fixes
+
+### Version 1.1.0: ***Dark Green***
+
+- added decimal to binary conversion
+- layout tweaks
+- performance tweaks
 
 ## Note :scroll:
 

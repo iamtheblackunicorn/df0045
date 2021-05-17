@@ -6,7 +6,8 @@
   "licensePhraseLabel": "Licensed unde the",
   "licenseLabel": "license",
   "decimalLabel": "Decimal",
-  "binaryLabel": "Binary",
-  "hexLabel": "Hex",
+  "binaryLabel": "B2D",
+  "hexLabel": "H2D",
+  "newLabelOne": "D2B",
   "resetLabel": "Reset"
 }

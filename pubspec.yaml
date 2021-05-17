@@ -1,9 +1,9 @@
 name: df
 description: Convert numbers!
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+2
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
 dependencies:
   flutter_localizations:
     sdk: flutter
@@ -11,10 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  harpo:
-    git: https://github.com/iamtheblackunicorn/Harpo.git
-  termstyle:
-    git: https://github.com/iamtheblackunicorn/TermStyle.git
+  harpo: ^2.1.0
+  termstyle: ^1.8.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -31,6 +31,6 @@ String convertHexadecimalToDecimal(String hex){
   return hexToDec(hex).toString();
 }
 
-void main(){
-  print(isBinary('0101010101010'));
+String convertDecimalToBinary(String decimal){
+  return decToBin(int.parse(decimal));
 }
