@@ -16,8 +16,8 @@ This app is a graphic tool to convert binary and hexadecimal numbers into decima
   - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.apk) (16.9 MB)
   - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.0.0/DF0045-v1.0.0-DarkRed-Release.app.zip) (12.3 MB)
 - *Dark Green* (v.1.1.0):
-  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.1.0/DF0045-v1.1.0-DarkGreen-Release.apk) (18.03 MB)
-  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/v.1.1.0/DF0045-v1.1.0-DarkGreen-Release.app.zip) (13.6 MB)
+  - [Download for Android](https://github.com/iamtheblackunicorn/df0045/releases/download/1.1.0/DF0045-v1.1.0-DarkGreen-Release.apk) (18.03 MB)
+  - [Download for Mac OSX](https://github.com/iamtheblackunicorn/df0045/releases/download/1.1.0/DF0045-v1.1.0-DarkGreen-Release.app.zip) (13.6 MB)
 
 ## Building :hammer:
 
