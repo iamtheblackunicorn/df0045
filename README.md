@@ -68,7 +68,5 @@ const Locale('languagecode', ''),
 
 ## Note :scroll:
 
-## Note :scroll:
-
 - *DF0045 :eagle:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
 - Licensed under the MIT license.
